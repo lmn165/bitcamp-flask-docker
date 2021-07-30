@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/modu/templete/data/202106_202106_연령별인구현황_월간.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/seoul.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unint_6_seoul.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit11_subwayfee.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit12_subwaytime.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit14_age.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit15_age.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit7_age.csv" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/modu/templete/data/unit8_age.csv" charset="x-windows-949" />
+  </component>
+</project>
