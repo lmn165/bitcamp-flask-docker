@@ -3,9 +3,9 @@ from matplotlib import font_manager, rc
 import seaborn as sns
 
 from titanic.models.dataset import Dataset
-from titanic.models.service import Service
+from titanic.models.titanic_service import TitanicService
 
-rc('font', family=font_manager.FontProperties(fname='C:/Windows/Fonts/H2GTRE.ttf').get_name())
+# rc('font', family=font_manager.FontProperties(fname='C:/Windows/Fonts/H2GTRE.ttf').get_name())
 '''
 Titanic's features
 PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarke
@@ -14,7 +14,7 @@ PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarke
 
 class Plot(object):
     dataset = Dataset()
-    service = Service()
+    service = TitanicService()
 
     def __init__(self):
         self.df = self.service.new_model('train.csv') # object is dataframe
@@ -30,7 +30,7 @@ class Plot(object):
         ax[0].set_ylabel('')
         ax[1].set_title('0.사망자 vs 1.생존자')
         sns.countplot('Survived', data=this, ax=ax[1])
-        f.suptitle('안뇽~!')
+        f.suptitle('사망자 생존자 비율 그래프')
         plt.show()
 
     def show_plot_pclass(self):
