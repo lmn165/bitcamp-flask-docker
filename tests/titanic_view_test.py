@@ -1,6 +1,6 @@
 import unittest
 
-from titanic.view.titanic_view import TitanicView
+from lecture.titanic.legacy.view import TitanicView
 
 class TitanicViewTest(unittest.TestCase):
     mock = TitanicView()
