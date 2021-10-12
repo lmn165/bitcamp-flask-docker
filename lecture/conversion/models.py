@@ -60,7 +60,7 @@ class Conversion(object):
         return [i for i in tpl]
 
     def dictionary_to_dataframe(self, dic) -> object:
-        return pd.DataFrame(dic, index=[0])
+        return pd.DataFrame.from_dict(dic, orient='index')
 
 
 if __name__ == '__main__':
