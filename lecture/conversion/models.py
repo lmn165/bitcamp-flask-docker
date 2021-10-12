@@ -45,14 +45,10 @@ class Conversion(object):
         return [i for i in tpl]
 
     def int_to_float(self, lst) -> []:
-        for i, val in enumerate(lst):
-            lst[i] = float(val)
-        return lst
+        return [float(i) for i in lst]
 
     def float_to_int(self, lst) -> []:
-        for i, val in enumerate(lst):
-            lst[i] = int(val)
-        return lst
+        return [int(i) for i in lst]
 
     def list_to_dictionary(self, lst) -> {}:
         return {str(i): i for i in lst}

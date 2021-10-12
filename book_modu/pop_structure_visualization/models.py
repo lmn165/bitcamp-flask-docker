@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import csv
 import numpy as np
-import pandasTest as pd
+import mypandas as pd
 
 
 class Population():

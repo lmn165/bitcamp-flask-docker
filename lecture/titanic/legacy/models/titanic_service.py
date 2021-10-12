@@ -1,5 +1,5 @@
 from lecture.titanic.legacy.models.dataset import Dataset
-import pandasTest as pd
+import mypandas as pd
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np

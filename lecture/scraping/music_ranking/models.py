@@ -1,4 +1,4 @@
-import pandasTest as pd
+import mypandas as pd
 from bs4 import BeautifulSoup
 import requests
 

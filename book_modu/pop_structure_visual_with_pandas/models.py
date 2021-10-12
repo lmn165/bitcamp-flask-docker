@@ -1,5 +1,5 @@
 import csv
-import pandasTest as pd
+import mypandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc

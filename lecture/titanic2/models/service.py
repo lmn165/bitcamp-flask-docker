@@ -1,4 +1,4 @@
-import pandasTest as pd
+import mypandas as pd
 
 from lecture.titanic2.models.dataset import Dataset
 

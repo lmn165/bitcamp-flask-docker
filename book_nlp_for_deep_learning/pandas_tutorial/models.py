@@ -1,4 +1,4 @@
-import pandasTest as pd
+import mypandas as pd
 
 
 class OlympicMedals(object):

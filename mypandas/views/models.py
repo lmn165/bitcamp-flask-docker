@@ -380,7 +380,7 @@ class MyPandas(object):
 
         '''    
         Q7. 키값 A와 중복된 값이 제거된 1,2,3,4,5,6,7 이 출력
-        ic| type(df7['A']): <class 'pandasTest.core.series.Series'>
+        ic| type(df7['A']): <class 'mypandas.core.series.Series'>
           ic| df7:    A
                    0  1
                    1  2
@@ -430,7 +430,7 @@ class MyPandas(object):
 
         '''  
         Q11. 체의 각 행에 대해 세번째 NaN 값이 들어 있는 열을 찾으시오. 일련의 열 레이블을 반환해야 합니다.
-          ic| type(df11.isnull()): <class 'pandasTest.core.frame.DataFrame'>
+          ic| type(df11.isnull()): <class 'mypandas.core.frame.DataFrame'>
           ic| df11: 0    e
                    1    c
                    2    d
@@ -441,8 +441,8 @@ class MyPandas(object):
 
         '''  
         Q12. grps 에서 a, b, c 별로 가장 큰 값
-          ic| type(df12.groupby('grps')): <class 'pandasTest.core.groupby.generic.DataFrameGroupBy'>
-          ic| type(df12.groupby('grps')['vals']): <class 'pandasTest.core.groupby.generic.SeriesGroupBy'>
+          ic| type(df12.groupby('grps')): <class 'mypandas.core.groupby.generic.DataFrameGroupBy'>
+          ic| type(df12.groupby('grps')['vals']): <class 'mypandas.core.groupby.generic.SeriesGroupBy'>
           ic| df12: grps
                   a    345
                   b     57

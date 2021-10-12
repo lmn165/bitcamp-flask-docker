@@ -1,5 +1,5 @@
 from sklearn.ensemble import RandomForestClassifier
-import pandasTest as pd
+import mypandas as pd
 
 from lecture.common.moels import ValueObject
 from lecture.menu.models import menu2
