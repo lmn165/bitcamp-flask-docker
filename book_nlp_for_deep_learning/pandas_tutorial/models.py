@@ -1,6 +1,7 @@
 import mypandas as pd
 
 
+
 class OlympicMedals(object):
 
     def read_wiki(self) -> object:

@@ -1,5 +1,9 @@
 import unittest
+<<<<<<< HEAD
 from lecture.titanic.legacy.models.titanic_service import TitanicService
+=======
+from lecture.titanic.models.titanic_service import TitanicService
+>>>>>>> 35435834777e479117f611cc4465f5fe32d2ce9b
 
 
 class TitanicServiceTest(unittest.TestCase):
