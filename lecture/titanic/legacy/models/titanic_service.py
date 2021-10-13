@@ -1,10 +1,7 @@
-<<<<<<< HEAD:lecture/titanic/legacy/models/titanic_service.py
 from lecture.titanic.legacy.models.dataset import Dataset
 import mypandas as pd
-=======
 from lecture.titanic.models.dataset import Dataset
 import pandas as pd
->>>>>>> 35435834777e479117f611cc4465f5fe32d2ce9b:lecture/titanic/models/titanic_service.py
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np

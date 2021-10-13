@@ -3,11 +3,11 @@ import mypandas as pd
 
 from lecture.common.moels import ValueObject
 from lecture.menu.models import menu2
-from lecture.titanic.models import Titanic
+from lecture.titanic.models import titanic_service
 
 if __name__ == '__main__':
     vo = ValueObject()
-    titanic = Titanic()
+    titanic = titanic_service()
     while 1:
         menu = menu2(['exit', 'plotting',
                            'preprocessing', 'learning'])
