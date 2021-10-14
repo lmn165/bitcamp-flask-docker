@@ -78,11 +78,11 @@ class MyPandas(object):
         ic(self.id())
         ic(self.score())
         # dic = {self.id():[self.score() for i in range(4)] for j in range(10)}
-        # score = [[random.randint(0,100) for i in range(4)] for j in range(10)]
         # df4 = pd.DataFrame.from_dict(dic, orient='index', columns=['국어', '영어', '수학', '사회'])
         # df4.to_csv('../data/sample.csv')
-        # score = [list(map(lambda x: random.randint(0, 100), range(4))) for i in range(10)]
 
+        # score = [[random.randint(0,100) for i in range(4)] for j in range(10)]
+        # score = [list(map(lambda x: random.randint(0, 100), range(4))) for i in range(10)]
         # score = list(map(lambda x: list(map(lambda y: random.randint(0, 100), range(4))), range(10)))
         # df4 = pd.DataFrame(score, index=[self.id() for i in range(10)], columns=['국어', '영어', '수학', '사회'])
         df4 = pd.read_csv('../data/sample.csv', index_col=0)
@@ -101,7 +101,47 @@ class MyPandas(object):
                  lGmwZ  32  50  95   1
                  GQzmY  59  37  80  27
         '''
-        df5 = df4.loc[:, :]
+        # df5 = pd.DataFrame({'국어': self.score(),
+        #                     '영어': self.score(),
+        #                     '수학': self.score(),
+        #                     '사회': self.score()
+        #                     }, index=[self.id()])
+        # for i in range(9):
+        #     df5.loc[self.id()] = {
+        #         '국어': self.score(),
+        #         '영어': self.score(),
+        #         '수학': self.score(),
+        #         '사회': self.score()
+        #     }
+
+        # for i in range(9):
+        #     df5.loc[self.id()] = [
+        #         self.score(),
+        #         self.score(),
+        #         self.score(),
+        #         self.score()
+        #     ]
+        subjects = ['국어', '영어', '수학', '사회']
+        # zip 을 이용한 dictionary 생성
+        # scores = list(map(lambda x: random.randint(0, 100), range(4)))
+        # student = ["".join([random.choice(string.ascii_letters) for i in range(5)])]
+        # dt = dict(zip(subjects, scores))
+        # df5 = pd.DataFrame(dt, index=student)
+
+        # list comprehension 방식으로 dictionary 생성
+        df5 = pd.DataFrame({i: random.randint(0, 100) for i in subjects},
+                           index=["".join([random.choice(string.ascii_letters) for i in range(5)])])
+
+        # list 로 처리 - 포지셔널 방식으로 값이 들어간다.
+        # for i in range(9):
+        #     df5.loc["".join([random.choice(string.ascii_letters) for i in range(5)])] \
+        #         = list(map(lambda x: random.randint(0, 100), range(4)))
+
+        # dictionary 로 처리 - key(column) 값으로 값이 들어간다.
+        for i in range(9):
+            df5.loc["".join([random.choice(string.ascii_letters) for i in range(5)])] \
+                = dict(zip(subjects, list(map(lambda x: random.randint(0, 100), range(4)))))
+
         ic(df5)
         ''' 
         Q5-1 국어 점수만 출력
@@ -125,6 +165,7 @@ class MyPandas(object):
         '''
         # ic(pd.DataFrame(df4.loc['vJLxh'])..set_index('vJLxh').transpose())
         ic(pd.DataFrame(df4.loc['vJLxh']).reset_index(drop=True).transpose())
+        # ic(df4.iloc[0:1])
         ''' 
         Q5-3 기존 학생들에게 과학과목과 점수를 랜덤으로 추가
         ic| df5:     국어  영어  수학  사회  과학
@@ -465,9 +506,8 @@ class MyPandas(object):
                    8  6
                    9  7
         '''
-        dic = {'A': range(1, 8)}
-        df7 = pd.Series(dic, index=range(7))
-        ic(type(df7))
+        df7 = pd.DataFrame({'A':[1, 1, 2, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 7]}).drop_duplicates()
+        ic(type(df7['A']))
         ic(df7)
         '''    
         Q8. 행의 각 요소에서 행의 평균을 뺀 값을 출력하되 부분집합으로 가로출력
